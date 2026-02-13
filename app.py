@@ -13,7 +13,7 @@ app = Flask(__name__)
 MODEL_PATH = "model.save"
 SCALER_PATH = "transform.save"
 
-MODEL_URL = "https://drive.google.com/uc?id=1tTQB5h_T6W3-2_6LHdZwmCm2_K2unb6p
+MODEL_URL = "https://drive.google.com/uc?id=1tTQB5h_T6W3-2_6LHdZwmCm2_K2unb6p"
 "
 SCALER_URL = "https://drive.google.com/uc?id=1jk91aKAOj5gAWPho8g4AUySwlojzocz0"
 
