@@ -3,4 +3,5 @@ __pycache__/
 *.pyc
 model.save
 electricmotor-dataset.csv
+transform.save
 .env
