@@ -49,9 +49,9 @@ def predict():
         user_input_scaled = scaler.transform(user_input)
         prediction = model.predict(user_input_scaled)[0]
 
-        if prediction < 40:
+        if prediction < 55:
             status = "✅ Normal Temperature"
-        elif 40 <= prediction < 60:
+        elif 55 <= prediction < 75:
             status = "⚠ High Temperature - Monitor Closely"
         else:
             status = "🔥 Critical Temperature (Near Maximum Limit)"
