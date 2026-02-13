@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Electric Motor Temperature</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            text-align: center;
+        }
+
+        .header {
+            background-color: black;
+            color: white;
+            padding: 15px;
+            font-size: 22px;
+        }
+
+        .container {
+            margin-top: 40px;
+        }
+
+        h2 {
+            font-weight: normal;
+        }
+
+        input {
+            width: 300px;
+            padding: 10px;
+            margin: 8px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+
+        button {
+            width: 320px;
+            padding: 10px;
+            background-color: black;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            margin-top: 10px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #333;
+        }
+
+        .result {
+            margin-top: 20px;
+            font-size: 18px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+<div class="header">
+    Electric Motor Temperature
+</div>
+
+<div class="container">
+    <h2>Electric Motor Temperature Prediction</h2>
+    <p>Fill in details to predict Permanent Magnet surface temperature.</p>
+
+    <form action="/predict" method="post">
+        <input type="text" name="ambient" placeholder="Ambient Temperature" required><br>
+        <input type="text" name="coolant" placeholder="Coolant Temperature" required><br>
+        <input type="text" name="u_d" placeholder="Voltage d-component" required><br>
+        <input type="text" name="u_q" placeholder="Voltage q-component" required><br>
+        <input type="text" name="motor_speed" placeholder="Motor Speed" required><br>
+        <input type="text" name="i_d" placeholder="Current d-component" required><br>
+        <input type="text" name="i_q" placeholder="Current q-component" required><br>
+
+        <button type="submit">Submit</button>
+    </form>
+
+    <div class="result">
+        {{ prediction_text }}
+        <br>
+        {{ status }}
+    </div>
+</div>
+
+</body>
+</html>
