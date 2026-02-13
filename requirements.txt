@@ -1,3 +1,5 @@
+setuptools>=65.0
+wheel
 Flask==2.2.5
 gunicorn==21.2.0
 gdown==5.2.0
